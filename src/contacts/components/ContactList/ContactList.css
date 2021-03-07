@@ -1,0 +1,12 @@
+table {
+    width: 60%;
+    margin: 0 auto;
+    border: 1px solid lightslategrey;
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 1px 1px 1px grey;
+    text-shadow: .2px .2px .2px blue;
+}
+thead {
+    font-weight: bold;
+}
