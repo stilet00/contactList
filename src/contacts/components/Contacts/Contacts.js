@@ -8,7 +8,7 @@ class Contacts extends Component {
     state = {
         contactList: [],
         formShown: false,
-        editedContact: {}
+        editedContact: null
     }
     render() {
         let page

@@ -25,12 +25,18 @@ class ContactList extends Component {
                         onEdit={this.props.onEdit}
                     />
                 })}
-                <Button
-                    variant="contained"
-                    color="primary"
-                    onClick={this.props.addPressed}
+                <tr>
+                    <td>
+                        <Button
+                            variant="contained"
+                            color="primary"
+                            onClick={this.props.addPressed}
 
-                ><AddIcon /></Button>
+                        ><AddIcon /></Button>
+                    </td>
+
+                </tr>
+
                 </tbody>
 
             </table>

@@ -72,6 +72,7 @@ class Form extends Component {
         );
     }
     componentDidMount() {
+        console.log(Boolean(this.props.editedContact))
         if (this.props.editedContact.name) {
             this.setState({contact: {...this.props.editedContact}, editing: !this.state.editing})
 
