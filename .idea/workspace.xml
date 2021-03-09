@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8f78448b-e5b9-4824-87c3-8fce9b26122c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/contacts/components/ContactList/ContactList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/contacts/components/ContactList/ContactList.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/contacts/components/Contacts/Contacts.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/contacts/components/Contacts/Contacts.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/contacts/components/Form/Form.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/contacts/components/Form/Form.js" afterDir="false" />
     </list>
@@ -78,7 +78,8 @@
       <workItem from="1615098738121" duration="1784000" />
       <workItem from="1615100550679" duration="1204000" />
       <workItem from="1615123271243" duration="569000" />
-      <workItem from="1615286173181" duration="344000" />
+      <workItem from="1615286173181" duration="1777000" />
+      <workItem from="1615287980447" duration="415000" />
     </task>
     <servers />
   </component>

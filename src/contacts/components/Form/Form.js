@@ -15,13 +15,18 @@ class Form extends Component {
     }
     onFormSubmit = (e) => {
         e.preventDefault()
-        if (!this.state.editing) {
-            this.props.onSave(this.state.contact)
+        if (this.props.validation(this.state.contact)) {
+            if (!this.state.editing) {
+                this.props.onSave(this.state.contact)
+            } else {
+                this.props.onEdit(this.state.contact)
+                this.setState({editing: false})
+            }
+            this.setState({contact: {...DefaultContact}})
         } else {
-            this.props.onEdit(this.state.contact)
-            this.setState({editing: false})
+            alert('Non of the fields should not be empty')
         }
-        this.setState({contact: {...DefaultContact}})
+
 
 
     }
@@ -72,7 +77,7 @@ class Form extends Component {
         );
     }
     componentDidMount() {
-        console.log(Boolean(this.props.editedContact))
+
         if (this.props.editedContact.name) {
             this.setState({contact: {...this.props.editedContact}, editing: !this.state.editing})
 

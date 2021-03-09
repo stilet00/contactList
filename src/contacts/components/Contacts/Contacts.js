@@ -8,7 +8,7 @@ class Contacts extends Component {
     state = {
         contactList: [],
         formShown: false,
-        editedContact: null
+        editedContact: {}
     }
     render() {
         let page
@@ -23,6 +23,7 @@ class Contacts extends Component {
         } else {
             page = <Form
                 formShown={this.state.formShown}
+                validation={this.checkFields}
                 onSave={this.createContact}
                 onEdit={this.saveEditing}
                 onCancel={this.cancelPressed}
@@ -44,17 +45,25 @@ class Contacts extends Component {
             contactList: this.state.contactList.filter((item) => item.id !== data.id)
         }))
     }
+    checkFields = (data) => {
+        if (!data.name || !data.surname || !data.phone) {
+            return false
+        } else {
+            return true
+        }
+    }
     createContact = (newContact) => {
-        createContact(newContact).then(res => {
-            this.setState({contactList: [...this.state.contactList, res]})
-            this.setState({formShown: !this.state.formShown})
-            }
-        )
+                createContact(newContact).then(res => {
+                        this.setState({contactList: [...this.state.contactList, res]})
+                        this.setState({formShown: !this.state.formShown})
+                    }
+                )
 
     }
     editContact = (contact) => {
-        this.setState({editedContact: {...contact}})
-        this.setState({formShown: !this.state.formShown})
+            this.setState({editedContact: {...contact}})
+            this.setState({formShown: !this.state.formShown})
+
 
     }
 
